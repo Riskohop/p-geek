@@ -1,5 +1,7 @@
 body {
     background: #2f2f2f;
+    margin: 0;
+    padding: 0;
 }
 .developer-site {
     position: fixed;
@@ -17,4 +19,201 @@ body {
 }
 .developer-site a:hover {
     color: #a2a2a2;
+}
+
+.author-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3% 13% 0 13%;
+}
+.author-info {
+    background-color: #595858;
+    margin:  0 0 3px 0px;
+}
+.author-block-2 {
+    display: flex;
+    flex-direction: row;
+}
+.author-img {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    flex: 1 1 max-content;
+    background-color: #595858;
+}
+.author-buttons {
+    display: flex;
+    flex: 1 1 max-content;
+    font-family: monospace;
+    background-color: #595858;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+.author-buttons p {
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: #212121;
+    border: 1px solid #ff5a91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-buttons p:hover {
+    flex: 4;
+}
+
+.author-buttons p span {
+    min-width: 14em;
+    padding: 0;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ff568e;
+    letter-spacing: .1em;
+}
+
+.author-buttons p:hover span {
+    transform: rotate(0);
+}
+/* загрузочный экран */
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #2f2f2f;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    //animation: spin 20s infinite linear;
+    transform: rotateX(150deg) rotateY(150deg);
+}
+.right {
+    transform: translateZ(0px) rotateZ(180deg);
+
+}
+
+.left {
+    transform: rotateY(90deg);
+
+}
+
+.up {
+    transform: rotateX(90deg) translateZ(0px);
+
+}
+
+.side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
+@keyframes spin {
+    0% {
+        transform: rotateX(150deg) rotateY(150deg);
+    }
+    50% {
+        transform: rotateX(-150deg) rotateY(-150deg);
+    }
+    100% {
+        transform: rotateX(150deg) rotateY(150deg);
+    }
+}
+.loader .face {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    animation: animate023845 3s linear infinite;
+}
+
+
+.loader .face {
+    width: 100%;
+    height: 100%;
+    color: #ff0000;
+    border-color: currentColor transparent transparent currentColor;
+    border-width: 0.2em 0.2em 0em 0em;
+    --deg: -45deg;
+    animation-direction: normal;
+}
+.loader .face .circle {
+    position: absolute;
+    width: 50%;
+    height: 0.1em;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    transform: rotate(var(--deg));
+    transform-origin: left;
+}
+
+.loader .face .circle::before {
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 2em,
+    0 0 4em,
+    0 0 6em,
+    0 0 8em,
+    0 0 10em,
+    0 0 0 0.5em rgba(255, 0, 0, 0.1);
+}
+
+@keyframes animate023845 {
+    to {
+        transform: rotate(3turn);
+    }
+}
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background:  #2f2f2f;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+}
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
 }
