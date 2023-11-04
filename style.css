@@ -1,0 +1,20 @@
+body {
+    background: #2f2f2f;
+}
+.developer-site {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-family: monospace;
+    font-size: large;
+    font-weight: 0;
+    color: #575757;
+
+}
+.developer-site a {
+    color: #5e5e5e;
+    transition: 0.2s;
+}
+.developer-site a:hover {
+    color: #a2a2a2;
+}
