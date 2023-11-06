@@ -96,14 +96,13 @@ body {
     background: transparent;
     outline: none;
     border: 0;
-    color: red;
+    color: #db5856;
     letter-spacing: 0.1em;
     font-family: monospace;
     font-size: 17px;
     font-weight: bold;
     z-index: 1;
 }
-
 .cubeBtn {
     position: relative;
     transition: all 0.5s;
@@ -112,7 +111,7 @@ body {
 .cubeBtn .bg-top {
     position: absolute;
     height: 10px;
-    background: red;
+    background: #db5856;
     bottom: 100%;
     left: 5px;
     right: -5px;
@@ -131,13 +130,13 @@ body {
     bottom: 0;
     top: 0;
     right: 0;
-    background: red;
+    background: #db5856;
     transition: all 0.4s;
 }
 
 .cubeBtn .bg-right {
     position: absolute;
-    background: red;
+    background: #db5856;
     top: -5px;
     z-index: 0;
     bottom: 5px;
@@ -166,7 +165,7 @@ body {
 }
 
 .cubeBtn:hover .bg-inner {
-    background: red;
+    background: #db5856;
     transition: all 0.4s;
 }
 
