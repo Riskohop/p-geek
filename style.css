@@ -81,6 +81,116 @@ body {
 .author-buttons p:hover span {
     transform: rotate(0);
 }
+.btns {
+    margin: 50px 40%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.btn {
+    display: block;
+    padding: 0.7em 1em;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: red;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.cubeBtn {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.cubeBtn .bg-top {
+    position: absolute;
+    height: 10px;
+    background: red;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+    transition: all 0.4s;
+}
+
+.cubeBtn .bg-top .bg-inner {
+    bottom: 0;
+}
+
+.cubeBtn .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: red;
+    transition: all 0.4s;
+}
+
+.cubeBtn .bg-right {
+    position: absolute;
+    background: red;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    transition: all 0.4s;
+}
+
+.cubeBtn .bg-right .bg-inner {
+    left: 0;
+}
+
+.cubeBtn .bg-inner {
+    background: #28282d;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.cubeBtn .text {
+    position: relative;
+    transition: all 0.4s;
+}
+
+.cubeBtn:hover .bg-inner {
+    background: red;
+    transition: all 0.4s;
+}
+
+.cubeBtn:hover .text {
+    color: #28282d;
+    transition: all 0.4s;
+}
+
+.cubeBtn:hover .bg-right,
+.cubeBtn:hover .bg,
+.cubeBtn:hover .bg-top {
+    background: #28282d;
+}
+
+.cubeBtn:active {
+    z-index: 9999;
+    animation: bounce .1s linear;
+}
+
+@keyframes bounce {
+    50% {
+        transform: scale(0.9);
+    }
+}
 /* загрузочный экран */
 .preloader {
     /*фиксированное позиционирование*/
