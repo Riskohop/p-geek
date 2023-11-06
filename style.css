@@ -23,72 +23,43 @@ body {
 
 .author-block {
     display: flex;
-    margin: 5% 0;
     justify-content: center;
+    margin: 30px 0;
+}
+.author-block div {
+    flex: 1 1 max-content;
 }
 .author-info {
     background-color: #595858;
-    margin:  0 0 3px 0px;
+    margin: 0 0 3px 0px;
 }
 .author-block-2 {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 min-content;
 }
 .author-img {
-    border-top: 0;
+    flex: 0 1 min-content;
+    max-width: 150px;
+    max-height: 200px;
+    justify-self: end;
 }
 .author-img img {
     filter: opacity(0%);
     max-width: 150px;
-}
-.author-buttons {
-    display: flex;
-    flex: 1 1 max-content;
-    font-family: monospace;
-    background-color: #595858;
-    gap: 5px;
-    margin: 0;
-    padding: 0;
-}
-.author-buttons p {
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all .5s;
-    background: #212121;
-    border: 1px solid #ff5a91;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.author-buttons p:hover {
-    flex: 4;
-}
-
-.author-buttons p span {
-    min-width: 14em;
-    padding: 0;
-    text-align: center;
-    transform: rotate(-90deg);
-    transition: all .5s;
-    text-transform: uppercase;
-    color: #ff568e;
-    letter-spacing: .1em;
-}
-
-.author-buttons p:hover span {
-    transform: rotate(0);
+    max-height: 200px;
 }
 .btns {
+    max-width: 160px;
+    flex: 0 1 min-content;
     margin: 0 0 6px 8px;
-    display: inline-flex;
-    justify-content: flex-end;
+    display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
     flex-direction: column;
 }
 .btn {
+    flex: 0 1 min-content;
     display: block;
     padding: 0.7em 1em;
     background: transparent;
