@@ -82,13 +82,11 @@ body {
     transform: rotate(0);
 }
 .btns {
-    margin: 50px 40%;
-    display: flex;
+    display: inline-flex;
+    margin: 5% 43%;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
-
 }
 .btn {
     display: block;
@@ -102,6 +100,18 @@ body {
     font-size: 17px;
     font-weight: bold;
     z-index: 1;
+}
+.btn:nth-of-type(1) {
+    z-index: 2;
+    transform: translateX(5px) translateY(-5px);
+}
+.btn:nth-of-type(2) {
+    z-index: 1;
+}
+.btn:nth-of-type(3) {
+    z-index: 0;
+    transform: translateX(-5px) translateY(5px);
+
 }
 .cubeBtn {
     position: relative;
@@ -151,7 +161,7 @@ body {
 }
 
 .cubeBtn .bg-inner {
-    background: #28282d;
+    background: #2f2f2f;
     position: absolute;
     left: 2px;
     right: 2px;
@@ -170,25 +180,14 @@ body {
 }
 
 .cubeBtn:hover .text {
-    color: #28282d;
+    color: #2f2f2f;
     transition: all 0.4s;
 }
 
 .cubeBtn:hover .bg-right,
 .cubeBtn:hover .bg,
 .cubeBtn:hover .bg-top {
-    background: #28282d;
-}
-
-.cubeBtn:active {
-    z-index: 9999;
-    animation: bounce .1s linear;
-}
-
-@keyframes bounce {
-    50% {
-        transform: scale(0.9);
-    }
+    background: #2f2f2f;
 }
 /* загрузочный экран */
 .preloader {
