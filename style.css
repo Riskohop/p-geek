@@ -39,14 +39,19 @@ body {
     flex: 1 1 min-content;
 }
 .author-img {
+    display: flex;
     flex: 0 1 min-content;
-    max-width: 150px;
+    max-width: 140px;
     max-height: 200px;
     justify-self: end;
+    align-items: center;
+    justify-content: stretch;
+    align-items: stretch;
 }
 .author-img img {
-    filter: opacity(0%);
-    max-width: 150px;
+    border: 2px solid #db5856;
+    filter: opacity(100%);
+    max-width: 136px;
     max-height: 200px;
 }
 .btns {
@@ -54,7 +59,7 @@ body {
     flex: 0 1 min-content;
     margin: 0 0 6px 8px;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-end;
     flex-direction: column;
 }
